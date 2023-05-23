@@ -23,6 +23,7 @@ export default function Movies() {
     const searchQuery = evt.target.elements.query.value;
     setSearchParams({ query: searchQuery });
   };
+  
   return (
     <WrapperMovies>
       <Form onSubmit={handleSubmit}>

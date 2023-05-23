@@ -6,7 +6,6 @@ display: flex;
 gap: 15px;
 flex-wrap: wrap
 `
-
 export const ActorsItem = styled.li`
 width: 200px`
 

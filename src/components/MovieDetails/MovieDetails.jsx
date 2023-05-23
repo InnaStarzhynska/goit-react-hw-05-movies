@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef, Suspense } from 'react';
 import { Outlet, useLocation, useParams } from 'react-router-dom';
 import { fetchMovieDetailes } from 'apiService/apiService';
-import { ButtonBack, Section, Wrapper, Title, SubTitle, Text, Genres, LinkWrapper, StyledLink } from './MovieDetailes.styled';
+import { ButtonBack, Section, Wrapper, Title, SubTitle, Text, Genres, LinkWrapper, StyledLink } from './MovieDetails.styled';
 import arrow from '../../images/arrow.svg'
 
 export default function MovieDetails() {
@@ -9,7 +9,7 @@ export default function MovieDetails() {
   const { moviesId } = useParams();
   const location = useLocation();
   const backLinkLocationRef = useRef(location.state?.from ?? '/');
-  console.log(film);
+
   useEffect(() => {
     fetchMovieDetailes(moviesId)
       .then(response => setFilm({ ...response.data }))
